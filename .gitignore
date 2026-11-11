@@ -6,3 +6,22 @@ out/
 *.log
 .qa/
 .migration/
+
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build files
+.next/
+out/
+dist/
+build/
+
+# Logs
+*.log
+
