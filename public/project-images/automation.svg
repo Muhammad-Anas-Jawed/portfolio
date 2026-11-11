@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#c5dddd"/><stop offset="1" stop-color="#f5f4e7"/></linearGradient></defs><rect width="1200" height="800" fill="url(#bg)"/><text x="90" y="90" font-family="Arial" font-size="13" letter-spacing="3" fill="#48787d">03 / SOFTWARE QUALITY ASSURANCE</text><text x="90" y="158" font-family="Arial" font-size="50" font-weight="bold" fill="#48787d">Quality in every check.</text><rect x="90" y="210" width="1020" height="480" rx="20" fill="#f9fcf6"/>
+  <text x="140" y="285" fill="#48787d" font-family="monospace" font-size="16">TEST SUITE / E-COMMERCE</text>
+  <g fill="none" stroke="#48787d" stroke-width="3"><circle cx="170" cy="365" r="17"/><path d="m162 365 6 6 12-14"/><circle cx="170" cy="455" r="17"/><path d="m162 455 6 6 12-14"/></g>
+  <text x="215" y="373" fill="#24483f" font-family="Arial" font-size="25">Signup &#183; unit testing</text>
+  <text x="215" y="463" fill="#24483f" font-family="Arial" font-size="25">Payments &#183; integration testing</text>
+  <path d="M140 510h920" stroke="#d2dfd1"/>
+  <text x="140" y="575" fill="#738579" font-family="Arial" font-size="18">Check the journey. Catch the edge cases.</text>
+  <text x="140" y="620" fill="#48787d" font-family="monospace" font-size="13">PROJECT OVERVIEW / SEE R?SUM? FOR DETAILS</text><text x="90" y="755" fill="#48787d" font-family="Arial" font-size="12" letter-spacing="1">CONCEPT ILLUSTRATION &#183; NOT AN APPLICATION SCREENSHOT</text><text x="1110" y="755" text-anchor="end" fill="#48787d" font-family="Arial" font-size="12">ANAS JAWED / SELECTED WORK</text></svg>

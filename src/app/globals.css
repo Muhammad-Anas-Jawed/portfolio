@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Page aur scrollable panels ki scrollbar theme ke saath match karti hai. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--muted);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--muted);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--muted);
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: "Geist Variable", sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* THEME: Sirf yahan colors badlein. */
+:root {
+  --background: #f1f6f0;
+  --foreground: #203f38;
+  --card: #fbfcf6;
+  --card-foreground: #203f38;
+  --popover: #fbfcf6;
+  --popover-foreground: #203f38;
+  --primary: #28665c;
+  --primary-foreground: #fbfcf6;
+  --secondary: #dce8dc;
+  --secondary-foreground: #244b40;
+  --muted: #e3ece2;
+  --muted-foreground: #557066;
+  --accent: #b9c79b;
+  --accent-foreground: #324a2c;
+  --destructive: #b94b49;
+  --border: #c7d7c8;
+  --input: #c7d7c8;
+  --ring: #28665c;
+  --chart-1: #28665c;
+  --chart-2: #e1cea2;
+  --chart-3: #80aaa0;
+  --chart-4: #b9c79b;
+  --chart-5: #5d8776;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* CSS-driven background orb animations - run on compositor thread instead of main-thread JS */
+@keyframes orb-1 {
+  0%,
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -100px) scale(1.2) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(0.8) rotate(180deg);
+  }
+  75% {
+    transform: translate(50px, -50px) scale(1.1) rotate(270deg);
+  }
+}
+@keyframes orb-2 {
+  0%,
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(360deg);
+  }
+  25% {
+    transform: translate(-120px, 120px) scale(0.9) rotate(270deg);
+  }
+  50% {
+    transform: translate(80px, -60px) scale(1.3) rotate(180deg);
+  }
+  75% {
+    transform: translate(-40px, 80px) scale(1.1) rotate(90deg);
+  }
+}
+@keyframes orb-3 {
+  0%,
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(50px, 150px) scale(1.5);
+  }
+  66% {
+    transform: translate(-100px, -150px) scale(0.8);
+  }
+}
+
+.orb {
+  will-change: transform;
+}
+.orb-1 {
+  animation: orb-1 25s linear infinite;
+}
+.orb-2 {
+  animation: orb-2 30s linear infinite;
+}
+.orb-3 {
+  animation: orb-3 20s linear infinite;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .orb {
+    animation: none !important;
+  }
+  [data-motion] {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+body {
+  margin: 0;
+}
+.site-shell {
+  background: linear-gradient(
+    130deg,
+    #f5f8ef 0%,
+    #edf5f0 35%,
+    #e8f2ee 65%,
+    #f5f0e0 100%
+  );
+}
+.font-syne {
+  font-family: "Geist Variable", sans-serif;
+}
+a,
+button {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 5px;
+}
+::selection {
+  background: #b9d2bd;
+  color: #203f38;
+}
+.skip-link {
+  position: fixed;
+  z-index: 200;
+  left: 15px;
+  top: -80px;
+  background: var(--card);
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+@media (max-width: 767px) {
+  #home {
+    padding-top: 35px;
+  }
+  #home > div:last-child {
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+.custom-cursor-active,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active [role="button"] {
+  cursor: none;
+}
