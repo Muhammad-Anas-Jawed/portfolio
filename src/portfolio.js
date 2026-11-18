@@ -3,7 +3,9 @@ export const profile = {
   name: "Muhammad Anas Jawed",
   shortName: "Anas Jawed",
   initials: "AJ",
-  role: "Software Engineer · Full Stack Developer · SQA Engineer",
+ 
+role: "Software Engineer · Full Stack Developer · React Developer · SQA Engineer",
+
   location: "Karachi, Pakistan",
   email: "anasjawed.1999@gmail.com",
   phone: "+92 331 3475734",
@@ -13,8 +15,10 @@ export const profile = {
   resume: "Anas-Jawed-Resume.pdf",
   // Photo lagani ho to public folder mein photo.jpg rakhein aur neeche naam likhein.
   photo: "",
-  intro:
-    "I build thoughtful web experiences and test the details that make them dependable. Bringing development and quality assurance together, from the first interface to the final check.",
+  
+intro:
+  "I am Anas Jawed, a software engineer and full stack developer in Karachi, Pakistan. I build React web experiences and apply software quality assurance to make them dependable, from the first interface to the final check.",
+
   about:
     "I'm a software engineering graduate from Sir Syed University of Engineering and Technology, based in Karachi. My work brings together responsive frontend development, backend integration, and hands-on testing of web and mobile applications.",
   approach:
